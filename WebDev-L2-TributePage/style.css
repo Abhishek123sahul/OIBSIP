@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #172033;
+    background: #f8fafc;
+    line-height: 1.7;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            rgba(15, 23, 42, 0.86),
+            rgba(30, 41, 59, 0.90)
+        ),
+        url("https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg")
+        center / cover no-repeat;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow,
+.section-label,
+.quote-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c89b3c;
+}
+
+.hero h1 {
+    margin: 15px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 7vw, 76px);
+
+    line-height: 1.1;
+}
+
+.tagline {
+    font-size: clamp(18px, 3vw, 25px);
+
+    color: #e2e8f0;
+
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background: #c89b3c;
+
+    color: #172033;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* General Section */
+
+.section {
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    padding: 90px 0;
+}
+
+
+/* About */
+
+.about-section {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.image-container {
+    background: #ffffff;
+
+    padding: 12px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.image-container img {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 12px;
+}
+
+.about-content h2,
+.section-heading h2 {
+    margin: 8px 0 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    line-height: 1.2;
+}
+
+.about-content p {
+    margin-bottom: 17px;
+
+    color: #475569;
+}
+
+
+/* Timeline */
+
+.timeline-section {
+    padding-top: 20px;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.timeline {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 30px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #dbe2ea;
+}
+
+.year {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #c08927;
+}
+
+.timeline-item h3 {
+    margin-bottom: 5px;
+
+    font-size: 20px;
+}
+
+.timeline-item p {
+    color: #64748b;
+}
+
+
+/* Quote */
+
+.quote-section {
+    background: #172033;
+
+    color: white;
+
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.quote-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.quote-content blockquote {
+    margin: 25px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(25px, 4vw, 42px);
+
+    line-height: 1.4;
+}
+
+.quote-author {
+    color: #cbd5e1;
+}
+
+
+/* Legacy */
+
+.legacy-section {
+    padding-bottom: 100px;
+}
+
+.legacy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.legacy-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e2e8f0;
+
+    transition: 0.3s ease;
+}
+
+.legacy-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(15, 23, 42, 0.08);
+}
+
+.legacy-card span {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #c08927;
+}
+
+.legacy-card h3 {
+    margin: 12px 0 8px;
+
+    font-size: 22px;
+}
+
+.legacy-card p {
+    color: #64748b;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: #0f172a;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+footer p:first-child {
+    margin-bottom: 5px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .image-container {
+        max-width: 500px;
+
+        margin: auto;
+    }
+
+    .legacy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .hero {
+        min-height: 65vh;
+    }
+
+    .timeline-item {
+        grid-template-columns: 70px 1fr;
+
+        gap: 15px;
+    }
+
+    .timeline-item h3 {
+        font-size: 18px;
+    }
+
+    .quote-section {
+        padding: 70px 20px;
+    }
+}
